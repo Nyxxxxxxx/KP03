@@ -1,5 +1,5 @@
 # KP03
-Project for Smart Attendence with fingerprint and face recognization
+### Project for Smart Attendence with fingerprint and face recognization
 
 Skill
 
