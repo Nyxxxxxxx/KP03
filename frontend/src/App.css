@@ -1,22 +1,23 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fdfd96, #ffeb3b);
+  min-height: 100vh;
 }
 
 .home-container {
   text-align: center;
-  background: linear-gradient(135deg, #fdfd96, #ffeb3b);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .home-header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: transparent; /* Make header background transparent */
+  box-shadow: none; /* Remove shadow to blend with the background */
 }
 
 .home-logo {
@@ -34,7 +35,8 @@ body {
 .home-main {
   flex: 1;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
 }
@@ -71,10 +73,4 @@ body {
 
 .home-button:hover {
   background-color: #fb8c00;
-}
-
-.home-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
