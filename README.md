@@ -27,3 +27,9 @@ Skill
 - Add Contact Page
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/eeb0bfef-d3c6-422d-909a-15ba14719a25">
 
+
+24.07.26
+- Desgin of Register & Login Page
+- Change DB : Add UserName & SchoolID
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0cdac01a-38f9-4046-ba03-0bce14a8a1ee">
