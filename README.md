@@ -12,8 +12,13 @@ Skill
 24.07.23
 - Add DB
 
+
 24.07.25
 - Add Register & Login Function
 - Make StduentView Page
 - Add Face Recognization Function
 - Make Profrssor Page (not linked)
+
+  
+- First Design
+<img width="1496" alt="image" src="https://github.com/user-attachments/assets/dbba67fa-957f-4923-ab8f-0182f14203c5">
