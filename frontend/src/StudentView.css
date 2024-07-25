@@ -1,0 +1,109 @@
+.student-view-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #fdd835;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-name {
+    text-align: center;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .menu-item {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    background-color: #ffeb3b;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .attendance-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .summary-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeb3b;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .present { background-color: #fdd835; }
+  .absent { background-color: #ffeb3b; }
+  .late { background-color: #ffc107; }
+  .leave { background-color: #ffb300; }
+  
+  .attendance-methods {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .method {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+  }
+  

@@ -74,3 +74,63 @@ body {
 .home-button:hover {
   background-color: #fb8c00;
 }
+
+
+/* Existing styles here */
+
+/* Add styles for the Contact page */
+.contact-container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fdfd96, #ffeb3b);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.contact-images {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure images are aligned horizontally in the center */
+  margin-bottom: 1rem;
+}
+
+.contact-image1 {
+  width: 300px; /* Adjust the width as needed */
+  height: auto;
+  margin: 0 1rem;
+}
+
+.contact-image {
+  width: 200px; /* Adjust the width as needed */
+  height: auto;
+  margin: 0 1rem;
+}
+
+.contact-main {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
