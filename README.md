@@ -10,4 +10,7 @@ Skill
 
 
 24.07.23
-- Add DB 
+- Add DB
+
+24.07.25
+- Add Register & Login Function
