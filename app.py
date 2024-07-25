@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///attendance.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # CORS configuration
-CORS(app, supports_credentials=True, origins=['http://localhost:3000', 'http://192.168.1.110:3000'])
+CORS(app, supports_credentials=True, origins='*')
 
 db = SQLAlchemy(app)
 

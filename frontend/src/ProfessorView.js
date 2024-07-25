@@ -7,7 +7,7 @@ const ProfessorView = () => {
 
   useEffect(() => {
     const fetchStudents = async () => {
-      const response = await axios.get('http://localhost:5000/students');
+      const response = await axios.get('http://127.0.0.1:5000/students');
       setStudents(response.data);
     };
     fetchStudents();

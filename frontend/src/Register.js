@@ -34,7 +34,7 @@ const Register = () => {
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Username</label>
+          <label>SchoolID</label>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
         </div>
         <div>

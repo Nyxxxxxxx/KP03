@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-function Login() {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -19,6 +19,7 @@ function Login() {
       });
 
       if (response.data.success) {
+        localStorage.setItem('username', username); // 사용자 이름 저장
         if (response.data.role === 'student') {
           navigate('/student');
         } else if (response.data.role === 'professor') {
@@ -61,6 +62,6 @@ function Login() {
       </form>
     </div>
   );
-}
+};
 
 export default Login;
