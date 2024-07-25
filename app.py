@@ -15,6 +15,7 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120), nullable=False)  # 이름 필드 추가
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
     role = db.Column(db.String(10), nullable=False)  # 'student' or 'professor'
@@ -43,17 +44,18 @@ class ClassStudent(db.Model):
 @app.route('/register', methods=['POST'])
 def register():
     data = request.json
+    name = data.get('name')
     username = data.get('username')
     password = data.get('password')
     role = data.get('role')
 
-    if not username or not password or not role:
+    if not name or not username or not password or not role:
         return jsonify({'message': 'Missing data'}), 400
 
     if User.query.filter_by(username=username).first():
         return jsonify({'message': 'User already exists'}), 400
 
-    new_user = User(username=username, role=role)
+    new_user = User(name=name, username=username, role=role)
     new_user.set_password(password)
     db.session.add(new_user)
     db.session.commit()
@@ -141,3 +143,5 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+
+# cd instance / rm attendance.db로 재실행 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Login.css'; // Assuming you have a CSS file for styling
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -37,31 +38,37 @@ const Login = () => {
     }
   };
 
-  
-
   return (
-    <div>
-      <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+    <div className="custom-body">
+      <div className="custom-login-container">
+        <div className="custom-form-container">
+          <h2>Login</h2>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          <form onSubmit={handleLogin}>
+            <div className="input-container">
+              <label>Enter your ID</label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-container">
+              <label>Enter your password</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <a href="/forgot-password" className="forgot-password">Forgot password?</a>
+            <button type="submit" className="login-button">Login</button>
+          </form>
+          <p className="signup-prompt">Don’t have an account? <a href="/signup">Signup</a></p>
         </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+      </div>
     </div>
   );
 };

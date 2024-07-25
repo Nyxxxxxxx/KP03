@@ -39,6 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  height: 100vh; /* 화면의 전체 높이를 사용 */
 }
 
 .home-welcome h1 {
