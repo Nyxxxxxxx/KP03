@@ -15,4 +15,5 @@ Skill
 24.07.25
 - Add Register & Login Function
 - Make StduentView Page
-- Add Face Recognization Function 
+- Add Face Recognization Function
+- Make Profrssor Page (not linked)
