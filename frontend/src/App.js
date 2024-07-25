@@ -4,6 +4,7 @@ import StudentView from './StudentView';
 import ProfessorView from './ProfessorView';
 import Home from './Home';
 import Register from './Register';
+import Login from './Login';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/student" element={<StudentView />} />
           <Route path="/professor" element={<ProfessorView />} />
           <Route path="/register" element={<Register />} />

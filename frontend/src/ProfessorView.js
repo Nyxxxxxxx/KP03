@@ -21,6 +21,8 @@ const ProfessorView = () => {
   return (
     <div>
       <h2>Professor View</h2>
+      <h2>Make Class</h2>
+      <h2>수업 클릭하면, 수업 일자 확인 가능 - 출석 학생 정보 확인 가능!</h2>
       <ul>
         {students.map(student => (
           <li key={student.id}>
