@@ -23,7 +23,7 @@ Skill
 - First Design
 <img width="1496" alt="image" src="https://github.com/user-attachments/assets/dbba67fa-957f-4923-ab8f-0182f14203c5">
 
-\n
+
 - Add Contact Page
-  ![image](https://github.com/user-attachments/assets/93402ac7-7868-42bd-8f90-5c9aab7e6e47)
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/eeb0bfef-d3c6-422d-909a-15ba14719a25">
 
