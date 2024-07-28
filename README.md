@@ -40,3 +40,5 @@ Skill
 24.07.28
 - Realtime Integration : with Local Time
 - Add LogOut Function 
+- Add Info Image
+  <img width="97" alt="image" src="https://github.com/user-attachments/assets/0f692285-454d-4df4-b2ef-c7e18cbca86c">
