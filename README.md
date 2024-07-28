@@ -33,3 +33,7 @@ Skill
 - Change DB : Add UserName & SchoolID
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/0cdac01a-38f9-4046-ba03-0bce14a8a1ee">
+
+24.07.28
+- Realtime Integration : with Local Time
+- Add LogOut Function 
