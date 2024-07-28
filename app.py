@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///attendance.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# CORS configuration
+# CORS 
 CORS(app, supports_credentials=True, origins='*')
 
 db = SQLAlchemy(app)

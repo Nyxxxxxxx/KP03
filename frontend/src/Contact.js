@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Ensure this file contains the necessary styling
+import './App.css';
 
 const Contact = () => (
   <div className="contact-container">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Login.css'; // Assuming you have a CSS file for styling
+import './Login.css'; 
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -66,7 +66,7 @@ const Login = () => {
             <a href="/forgot-password" className="forgot-password">Forgot password?</a>
             <button type="submit" className="login-button">Login</button>
           </form>
-          <p className="signup-prompt">Don’t have an account? <a href="/signup">Signup</a></p>
+          <p className="signup-prompt">Don’t have an account? <a href="/register">Signup</a></p>
         </div>
       </div>
     </div>

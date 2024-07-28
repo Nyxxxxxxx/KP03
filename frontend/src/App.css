@@ -16,8 +16,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: transparent; /* Make header background transparent */
-  box-shadow: none; /* Remove shadow to blend with the background */
+  background-color: transparent; 
+  box-shadow: none; 
 }
 
 .home-logo {
@@ -79,7 +79,7 @@ body {
 
 /* Existing styles here */
 
-/* Add styles for the Contact page */
+/* Style of Contact page */
 .contact-container {
   text-align: center;
   padding: 2rem;
@@ -98,18 +98,18 @@ body {
 .contact-images {
   display: flex;
   justify-content: center;
-  align-items: center; /* Ensure images are aligned horizontally in the center */
+  align-items: center; 
   margin-bottom: 1rem;
 }
 
 .contact-image1 {
-  width: 300px; /* Adjust the width as needed */
+  width: 300px; 
   height: auto;
   margin: 0 1rem;
 }
 
 .contact-image {
-  width: 200px; /* Adjust the width as needed */
+  width: 200px; 
   height: auto;
   margin: 0 1rem;
 }
