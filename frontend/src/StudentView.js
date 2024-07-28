@@ -8,6 +8,8 @@ const StudentView = () => {
   const username = localStorage.getItem('username');
   const [currentDate, setCurrentDate] = useState('');
   const [currentTime, setCurrentTime] = useState('');
+  const [activeMenu, setActiveMenu] = useState('dashboard');
+  const [userInfo, setUserInfo] = useState(null);
   const profilePicUrl = "/images/user.png";
   const navigate = useNavigate();
 
@@ -26,6 +28,16 @@ const StudentView = () => {
   const logout = () => {
     localStorage.removeItem('username');
     navigate('/');
+  };
+
+  const fetchUserInfo = async () => {
+    try {
+      const response = await axios.get(`http://127.0.0.1:5000/user_info/${username}`);
+      setUserInfo(response.data);
+      setActiveMenu('profile');
+    } catch (error) {
+      console.error('Error fetching user info:', error);
+    }
   };
 
   useEffect(() => {
@@ -58,11 +70,53 @@ const StudentView = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const renderContent = () => {
+    switch(activeMenu) {
+      case 'dashboard':
+        return (
+          <div className="attendance-summary">
+            <div className="summary-item present">Present<br />0</div>
+            <div className="summary-item absent">Absent<br />0</div>
+            <div className="summary-item late">Late<br />0</div>
+            <div className="summary-item leave">Leave<br />0</div>
+          </div>
+        );
+      case 'student':
+        return <div>Student Content</div>;
+      case 'lecture':
+        return <div>Lecture Content</div>;
+      case 'attendance':
+        return (
+          <div className="attendance-methods">
+            <div className="method face-recognition">
+              <div className="icon"></div>
+              <button>Submit</button>
+            </div>
+            <div className="method fingerprint">
+              <div className="icon"></div>
+              <button>Submit</button>
+            </div>
+          </div>
+        );
+      case 'profile':
+        return userInfo && (
+          <div className="profile-info">
+            <h2>Profile Information</h2>
+            <p><strong>Name:</strong> {userInfo.name}</p>
+            <p><strong>Username:</strong> {userInfo.username}</p>
+            <p><strong>Role:</strong> {userInfo.role}</p>
+          </div>
+        );
+      default:
+        return <div>Dashboard Content</div>;
+    }
+  };
+
   return (
     <div className="student-view-container">
       <div className="sidebar">
         <div className="profile">
-          <div className="profile-pic">
+          <div className="profile-pic" onClick={fetchUserInfo}>
             <img src={profilePicUrl} alt="Profile" />
           </div>
           <div className="profile-name">
@@ -71,10 +125,10 @@ const StudentView = () => {
           </div>
         </div>
         <ul className="menu">
-          <li className="menu-item">Dashboard</li>
-          <li className="menu-item">Student</li>
-          <li className="menu-item">Lecture</li>
-          <li className="menu-item">Attendance</li>
+          <li className="menu-item" onClick={() => setActiveMenu('dashboard')}>Dashboard</li>
+          <li className="menu-item" onClick={() => setActiveMenu('student')}>Student</li>
+          <li className="menu-item" onClick={() => setActiveMenu('lecture')}>Lecture</li>
+          <li className="menu-item" onClick={() => setActiveMenu('attendance')}>Attendance</li>
         </ul>
       </div>
       <div className="main-content">
@@ -85,22 +139,7 @@ const StudentView = () => {
             <button onClick={logout} className="logout-button">Logout</button>
           </div>
         </div>
-        <div className="attendance-summary">
-          <div className="summary-item present">Present<br />0</div>
-          <div className="summary-item absent">Absent<br />0</div>
-          <div className="summary-item late">Late<br />0</div>
-          <div className="summary-item leave">Leave<br />0</div>
-        </div>
-        <div className="attendance-methods">
-          <div className="method face-recognition">
-            <div className="icon"></div>
-            <button>Submit</button>
-          </div>
-          <div className="method fingerprint">
-            <div className="icon"></div>
-            <button>Submit</button>
-          </div>
-        </div>
+        {renderContent()}
       </div>
     </div>
   );

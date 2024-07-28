@@ -139,6 +139,23 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Credentials', 'true')
     return response
 
+
+# Flask API에 사용자 정보 엔드포인트 추가
+
+@app.route('/user_info/<username>', methods=['GET'])
+def get_user_info(username):
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        return jsonify({'error': 'User not found'}), 404
+
+    user_info = {
+        'name': user.name,
+        'username': user.username,
+        'role': user.role
+    }
+    return jsonify(user_info)
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
