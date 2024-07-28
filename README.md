@@ -41,4 +41,5 @@ Skill
 - Realtime Integration : with Local Time
 - Add LogOut Function 
 - Made Page of Info in StudentView Page
+
   : If you click the Info-icon, you can get Student_Info from DB
