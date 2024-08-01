@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css'; 
 
-const Login = () => {
+const Login = ({ setProfessorId }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -24,6 +24,9 @@ const Login = () => {
         if (response.data.role === 'student') {
           navigate('/student');
         } else if (response.data.role === 'professor') {
+          const userInfoResponse = await axios.get(`http://127.0.0.1:5000/user_info/${username}`);
+          console.log("User info response:", userInfoResponse.data);
+          setProfessorId(userInfoResponse.data.id);  // 교수 ID 설정
           navigate('/professor');
         }
       } else {

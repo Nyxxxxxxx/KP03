@@ -9,7 +9,6 @@ const Home = () => (
       <nav className="home-nav">
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/logout">Logout</Link>
       </nav>
     </header>
     <main className="home-main">
